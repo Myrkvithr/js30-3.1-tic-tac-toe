@@ -1,0 +1,374 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+}
+
+p,
+h1,
+h2,
+h3,
+h4 {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Shizuru', cursive;
+    font-style: normal;
+    color: rgb(250, 218, 91);
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 40px;
+    min-height: 100vh;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    background-color: #226293;
+    flex-wrap: wrap;
+    overflow-x: hidden;
+
+}
+
+
+//--------------------------
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    padding-left: calc(0% + 15px);
+    padding-right: calc(0% + 15px);
+}
+
+//---------------------------
+
+
+
+
+//-------HEADER
+//-------
+
+.header__container {
+    height: 75px;
+    background: #000;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 70px;
+    padding: 0 20px;
+    box-shadow: 0 0 2rem #00000080;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.header__logo {
+    color: rgb(250, 218, 91);
+    font-size: 32px;
+    text-shadow: 0px 0px 15px rgb(255, 208, 0);
+    transition: 0.5s;
+
+    &:hover {
+        color: #21cde4;
+        text-shadow: 0px 0px 15px rgb(0, 110, 255);
+    }
+
+}
+
+
+//-------
+//-------
+//-------
+
+
+
+
+
+//-------MAIN
+//-------
+
+.content {
+    color: rgb(250, 218, 91);
+    font-family: 'Comfortaa', cursive;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.area {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: auto auto auto;
+    grid-gap: 10px;
+    margin-bottom: 20px;
+}
+
+.area__result {
+    height: 50px;
+}
+
+.area__item {
+    display: grid;
+    width: 100px;
+    height: 100px;
+    border: 2px solid rgb(250, 218, 91);
+    box-shadow: 0 0 10px #00000080;
+    text-shadow: 0px 0px 25px #00000080;
+    font-size: 100px;
+    font-weight: 200;
+    line-height: 110px;
+    align-items: center;
+    justify-items: center;
+    cursor: pointer;
+
+}
+
+
+.circle {
+    margin-top: -2px;
+    margin-left: -2px;
+    width: 100px;
+    height: 100px;
+    stroke-dasharray: 283;
+    stroke-dashoffset: 283;
+    animation: draw 2s forwards;
+}
+
+.cross {
+    margin-top: -2px;
+    margin-left: -2px;
+    width: 100px;
+    height: 100px;
+}
+
+.first {
+    stroke-dasharray: 125;
+    stroke-dashoffset: 125;
+    animation: draw 0.5s forwards;
+}
+
+.second {
+    stroke-dasharray: 125;
+    stroke-dashoffset: 125;
+    animation: draw 0.7s 0.7s forwards;
+}
+
+.active {
+    background: rgb(35, 15, 212);
+}
+
+@keyframes draw {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+
+.btn__new-game {
+    background-color: rgb(250, 218, 91);
+    box-shadow: 0 0 20px #00000080;
+    text-shadow: 0px 0px 15px #00000080;
+    cursor: pointer;
+    border-radius: 20px;
+    margin-bottom: 40px;
+
+    &:hover {
+        background-color: rgb(252, 195, 10);
+        box-shadow: 0 0 20px #00000080;
+        text-shadow: 0px 0px 5px #00000080;
+    }
+}
+
+.table-records {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: small;
+    color: rgb(71, 65, 5);
+    background: rgb(209, 211, 113);
+    width: 320px;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+}
+
+.table-records__title {
+    margin-bottom: 10px;
+}
+
+.table-records__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-direction: column;
+    padding-left: 10px;
+    padding-right: 10px;
+
+
+}
+
+.table-records__row {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.table-records__inner {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.table-records__item {}
+
+.table-records__item-title {
+    border-bottom: 1px solid rgb(71, 65, 5);
+    margin-bottom: 20px;
+}
+
+.table-records__item-time {}
+
+.table-records__item-winner {}
+
+.table-records__item-moves {}
+
+
+//-------
+//-------
+//-------
+
+
+
+
+
+
+
+//--------  FOOTER
+//--------
+
+.footer {
+    height: 75px;
+    background: #000;
+    // color: #FFFFFF;
+    color: rgb(250, 218, 91);
+    font-family: 'Comfortaa', cursive;
+    box-shadow: 0 0 2rem #00000000;
+}
+
+.footer__created {
+    font-size: 18px;
+    line-height: 50px;
+    display: flex;
+
+}
+
+.footer__created-copy {
+    font-size: 20px;
+    line-height: 50px;
+}
+
+.footer__created-year {
+    padding-left: 18px;
+    padding-right: 10px;
+    font-size: 20px;
+    line-height: 50px;
+}
+
+.footer__created-link {
+    font-size: 19px;
+    line-height: 50px;
+}
+
+.footer__rs-school-link {
+    width: 100px;
+    height: 50px;
+    // background-image: url('../rss.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: 0.5s;
+    display: flex;
+    align-items: center;
+
+    path {
+        fill: rgb(250, 218, 91);
+        transition: 0.5s;
+    }
+
+    &:hover {
+        path {
+            fill: #21cde4;
+        }
+    }
+}
+
+
+.footer-link-style {
+    color: rgb(250, 218, 91);
+    border: none;
+    transition: 0.5s;
+
+    &:hover {
+        color: #21cde4;
+    }
+
+}
+
+
+
+
+//----------------------
+//------------------
+
+@media (max-width: 350px) {
+
+    .header__logo,
+    .btn__new-game,
+    .footer__created-copy,
+    .footer__created-year,
+    .footer__created-link {
+        font-size: 14px;
+    }
+
+    .table-records {
+        width: 100%;
+    }
+
+    .table-records__title {
+        font-size: 16px;
+    }
+
+    .table-records__item-title,
+    .area__result {
+        font-size: 12px;
+    }
+
+    .area {
+        grid-gap: 0px;
+        margin-bottom: 10px;
+    }
+
+    .area__item {
+        display: grid;
+        width: 80px;
+        height: 80px;
+    }
+
+    .btn__new-game {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin-bottom: 10px;
+    }
+}
